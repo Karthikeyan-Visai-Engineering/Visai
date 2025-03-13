@@ -7,11 +7,11 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gradient-to-r from-gray-900 to-gray-800 text-white ">
+    <header className="bg-gradient-to-r from-white-900 to-gray-white border-4 border-blue-900 ">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         
         {/* Logo */}
-        <Link to="/" className=" ">
+        <Link to="/" className="flex justify-start px-4">
           <img src={logo}  alt="Company Logo" className="logo-img " />
         </Link>
 
@@ -21,7 +21,7 @@ function Header() {
             <li>
               <Link
                 to="/"
-                className="hover:text-red-700 transition duration-300"
+                className="hover:text-red-700 transition font-bold duration-300"
               >
                 Home
               </Link>
@@ -29,7 +29,7 @@ function Header() {
             <li>
               <Link
                 to="/about"
-                className="hover:text-red-700 transition duration-300"
+                className="hover:text-red-700 text-blue transition font-bold duration-300"
               >
                 About
               </Link>
@@ -37,7 +37,7 @@ function Header() {
             <li>
               <Link
                 to="/projects"
-                className="hover:text-red-700 transition duration-300"
+                className="hover:text-red-700 transition duration-300 font-bold"
               >
                 Projects
               </Link>
@@ -45,7 +45,7 @@ function Header() {
             <li>
               <Link
                 to="/contact"
-                className="hover:text-red-700 transition duration-300"
+                className="hover:text-red-700 transition duration-300 font-bold"
               >
                 Contact
               </Link>
