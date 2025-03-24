@@ -7,7 +7,9 @@ const projects = [
     id: 1, 
     name: "Voortman steel group​", 
     image: Project1, 
-    description: "Monee, Illinois, USA​." 
+    description: "Monee, Illinois, USA​.",
+    weight: "Weight : 481 MTon", 
+    scope_of_work: "3D Modeling & Detailing​"
   }
 ];
 
@@ -61,6 +63,13 @@ function Projects() {
                 <p className="text-gray-600 mt-2 text-center">
                   {project.description}
                 </p>
+                <p className="text-gray-600 mt-2 text-center">
+                  {project.weight}
+                </p>
+                <p className="text-gray-600 mt-2 text-center">
+                  {project.scope_of_work}
+                </p>
+
               </motion.div>
             ))}
           </div>
