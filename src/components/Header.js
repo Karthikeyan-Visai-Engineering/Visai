@@ -7,8 +7,8 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gradient-to-r from-white-900 to-gray-white border-4 border-blue-900 ">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6">
+    <header className="bg-gradient-to-r from-gray-300 to-gray-900 border-4 border-gray-900 ">
+      <div className="container mx-auto flex justify-between items-center py-1 px-6">
         
         {/* Logo */}
         <Link to="/" className="flex justify-start px-4">
@@ -17,7 +17,7 @@ function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex">
-          <ul className="flex space-x-8 text-xl font-extrabold text-blue-900">
+          <ul className="flex space-x-8 text-xl font-extrabold text-gray-100">
             <li>
               <Link
                 to="/"
