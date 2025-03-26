@@ -30,14 +30,14 @@ function ImageSlider() {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto mt-6 px-4 pt-24">
+    <div className="w-full max-w-10xl mx-auto mt-6 px-4 pt-24">
       <Slider {...settings}>
         {images.map((image) => (
-          <div key={image.id} className="relative w-full h-[60vh] md:h-[75vh] flex items-center justify-center">
+          <div key={image.id} className="relative w-full h-[70vh] md:h-[50vh] flex items-center justify-center">
             <img
               src={image.src}
               alt={image.alt}
-              className="w-full h-full object-cover rounded-lg shadow-2xl transition-transform duration-500 hover:scale-105"
+              className="w-full h-full object-cover rounded-5xl shadow-5xl transition-transform duration-500 hover:scale-105"
             />
             {/* Title Overlay */}
             {/* <div className="absolute bottom-6 left-6 bg-black bg-opacity-60 text-white text-xl md:text-2xl font-semibold px-6 py-3 rounded-md shadow-lg">

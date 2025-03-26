@@ -6,9 +6,9 @@
 @tailwind utilities;
 
 
-body,*{
-  font-family: "Poppins", serif;
-  font-weight: 400;
+body,*,.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
   font-style: normal;
 }
 .logo-img {
