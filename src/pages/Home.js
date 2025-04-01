@@ -80,22 +80,23 @@ function Home() {
 
       {/* About Us Section */}
       <motion.div
-      className="bg-gradient-to-r from-gray-700 to-gray-800 text-gray-900 p-6 md:p-12 mb-10 mt-10 rounded-3xl shadow-lg mx-auto max-w-4xl transform hover:scale-105 transition duration-300"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-    >
-      <h2 className="text-3xl md:text-5xl text-white font-extrabold text-center">
-        WELCOME TO <br className="block md:hidden" />
-        <span className="text-yellow-400 font-bold">VISAI ENGINEERING</span>
-      </h2>
-      <div className="w-16 md:w-24 h-1 bg-yellow-500 mx-auto mt-3 rounded-full"></div>
-      <p className="text-white text-sm md:text-lg px-4 md:px-6 py-4 leading-relaxed text-center">
-        "At Visai Engineering, we specialize in innovative building and infrastructure solutions. 
-        Our expertise spans structural and mechanical design engineering. Our team of certified 
-        professionals delivers industry-leading services with cutting-edge technology."
-      </p>
-    </motion.div>
+  className="bg-gradient-to-r from-gray-700 to-gray-800 text-gray-900 p-6 md:p-12 mb-10 mt-10 rounded-3xl shadow-lg mx-auto max-w-[90%] md:max-w-3xl lg:max-w-4xl transform hover:scale-105 transition duration-300"
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  <h2 className="text-2xl md:text-4xl lg:text-5xl text-white font-extrabold text-center">
+    WELCOME TO <br className="block md:hidden" />
+    <span className="text-yellow-400 font-bold">VISAI ENGINEERING</span>
+  </h2>
+  <div className="w-12 md:w-16 lg:w-24 h-1 bg-yellow-500 mx-auto mt-3 rounded-full"></div>
+  <p className="text-white text-sm md:text-base lg:text-lg px-2 md:px-6 py-4 leading-relaxed text-center">
+    "At Visai Engineering, we specialize in innovative building and infrastructure solutions. 
+    Our expertise spans structural and mechanical design engineering. Our team of certified 
+    professionals delivers industry-leading services with cutting-edge technology."
+  </p>
+</motion.div>
+
 
       {/* Services Section */}
       <motion.h1
