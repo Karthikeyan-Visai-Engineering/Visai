@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -35,70 +36,91 @@ function ContactForm() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-900 to-gray-700 p-6">
-      <div className="bg-white bg-opacity-20 backdrop-blur-lg shadow-2xl rounded-2xl p-8 md:p-12 max-w-lg w-full">
-        <h2 className="text-4xl font-extrabold text-center text-blue-900">
+    <div className="flex items-center justify-center min-h-screen bg-white p-6">
+      <motion.div
+        className="bg-gray-700  backdrop-blur-2xl shadow-xl rounded-2xl p-8 md:p-12 max-w-lg w-full"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        <h2 className="text-4xl font-extrabold text-center text-white">
           Contact Us
         </h2>
         <div className="w-20 h-1 bg-yellow-400 mx-auto mt-3 rounded-full"></div>
-        
-        <form onSubmit={handleSubmit} className="space-y-6 mt-3">
+
+        <motion.form
+          onSubmit={handleSubmit}
+          className="space-y-6 mt-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
+        >
           <div>
-            <input
+            <motion.input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your name"
-              className="w-full mt-2 p-3 border border-gray-900 rounded-lg bg-white text-blue-950 shadow-md"
+              className="w-full mt-2 p-3 border border-gray-900 rounded-2xl bg-white text-white font-black shadow-md"
               required
+              whileFocus={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
             />
           </div>
-          
+
           <div>
-            <input
+            <motion.input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
-              className="w-full mt-2 p-3 border border-gray-900 rounded-lg bg-white text-blue-950 shadow-md"
+              className="w-full mt-2 p-3 border border-gray-900 rounded-2xl bg-white text-black font-black  shadow-md"
               required
+              whileFocus={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
             />
           </div>
-          
+
           <div>
-            <input
+            <motion.input
               type="text"
               name="subject"
               value={formData.subject}
               onChange={handleChange}
               placeholder="Enter the subject"
-              className="w-full mt-2 p-3 border border-gray-900 rounded-lg bg-white text-blue-950 shadow-md"
+              className="w-full mt-2 p-3 border border-gray-900 rounded-2xl bg-white text-black font-black  shadow-md"
               required
+              whileFocus={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
             />
           </div>
 
           <div>
-            <textarea
+            <motion.textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
               rows="5"
               placeholder="Write your message..."
-              className="w-full mt-2 p-3 border border-gray-900 rounded-lg bg-white text-blue-950 shadow-md"
+              className="w-full mt-2 p-3 border border-gray-900 rounded-2xl bg-white text-black font-black shadow-md"
               required
-            ></textarea>
+              whileFocus={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            ></motion.textarea>
           </div>
 
-          <button
+          <motion.button
             type="submit"
-            className="w-full bg-yellow-500 text-gray-900 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-600 transition duration-300"
+            className="w-full bg-yellow-500 text-gray-900 py-3 rounded-2xl text-lg font-semibold hover:bg-yellow-400 transition duration-300"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           >
             Send Message
-          </button>
-        </form>
-      </div>
+          </motion.button>
+        </motion.form>
+      </motion.div>
     </div>
   );
 }

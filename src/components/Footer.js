@@ -33,7 +33,7 @@ function Footer() {
                 </p>
                 <h1 className="text-2xl text-orange-400 font-bold mb-2 py-2">CANADA</h1>
                 <p className="text-lg leading-relaxed">
-                  Visai Engineering Inc<br />
+                  Visai Energy Inc<br />
                   500 - 4th Avenue SW, Suite 2500 <br />
                   Calgary, T2P 2V6, Alberta <br />
                   Ph : 403 604 9777 <br />
