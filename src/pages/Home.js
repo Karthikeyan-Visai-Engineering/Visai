@@ -114,54 +114,76 @@ function Home() {
 
         {/* Structural Engineering (Slide Left to Right) */}
          {/* Structural Engineering */}
-      <motion.div
-        className="bg-gradient-to-r from-gray-700 to-gray-800 text-white p-12 md:p-16 rounded-3xl shadow-lg mx-auto max-w-5xl flex flex-col lg:flex-row items-center transform hover:scale-105 transition duration-300"
-        variants={slideLeftToRight}
-      >
-        <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
-          <img src={structural} alt="Structural Engineering" className="w-full h-64 object-cover rounded-l-xl" />
-        </div>
-        <div className="w-full lg:w-1/2 p-4 md:p-8">
-          <h1 className="text-3xl text-yellow-400 font-bold mb-4">STRUCTURAL ENGINEERING</h1>
-          <p className="text-white text-lg font-semibold">
-            Our structural engineers design and analyze buildings and infrastructure to ensure safety, 
-            stability, and durability.
-          </p>
-        </div>
-      </motion.div>
+         <motion.div
+  className="bg-gradient-to-r from-gray-700 to-gray-800 text-white p-8 md:p-12 lg:p-16 rounded-3xl shadow-lg mx-auto max-w-[90%] md:max-w-4xl lg:max-w-5xl flex flex-col lg:flex-row items-center gap-6 lg:gap-12 transform hover:scale-105 transition duration-300"
+  variants={slideLeftToRight}
+>
+  <div className="w-full lg:w-1/2">
+    <img 
+      src={structural} 
+      alt="Structural Engineering" 
+      className="w-full h-48 md:h-64 object-cover rounded-xl lg:rounded-l-xl"
+    />
+  </div>
+  <div className="w-full lg:w-1/2 p-4 md:p-8 text-center lg:text-left">
+    <h1 className="text-2xl md:text-3xl text-yellow-400 font-bold mb-4">
+      STRUCTURAL ENGINEERING
+    </h1>
+    <p className="text-white text-base md:text-lg font-semibold leading-relaxed">
+      Our structural engineers design and analyze buildings and infrastructure to ensure 
+      safety, stability, and durability.
+    </p>
+  </div>
+</motion.div>
+
 
       {/* Mechanical Engineering */}
-      <motion.div
-        className="bg-gradient-to-r from-gray-700 to-gray-800  text-white p-12 md:p-16 rounded-3xl shadow-lg mx-auto max-w-5xl flex flex-col lg:flex-row items-center transform hover:scale-105 transition duration-300"
-        variants={slideRightToLeft}
-      >
-        <div className="w-full lg:w-1/2 order-last lg:order-first p-4 md:p-8">
-          <h1 className="text-3xl text-yellow-400 font-bold mb-4">MECHANICAL ENGINEERING</h1>
-          <p className="text-gray-100 text-lg font-semibold">
-            Our mechanical engineers design HVAC, plumbing, and fire protection systems to create safe 
-            and comfortable environments.
-          </p>
-        </div>
-        <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
-          <img src={hvac} alt="HVAC Solution" className="w-full h-72 object-cover rounded-xl" />
-        </div>
-      </motion.div>
+<motion.div
+  className="bg-gradient-to-r from-gray-700 to-gray-800 text-white p-8 md:p-12 lg:p-16 rounded-3xl shadow-lg mx-auto max-w-[90%] md:max-w-4xl lg:max-w-5xl flex flex-col lg:flex-row items-center gap-6 lg:gap-12 transform hover:scale-105 transition duration-300"
+  variants={slideRightToLeft}
+>
+  <div className="w-full lg:w-1/2 order-last lg:order-first p-4 md:p-8 text-center lg:text-left">
+    <h1 className="text-2xl md:text-3xl text-yellow-400 font-bold mb-4">
+      MECHANICAL ENGINEERING
+    </h1>
+    <p className="text-gray-100 text-base md:text-lg font-semibold leading-relaxed">
+      Our mechanical engineers design HVAC, plumbing, and fire protection systems to create safe 
+      and comfortable environments.
+    </p>
+  </div>
+  <div className="w-full lg:w-1/2">
+    <img 
+      src={hvac} 
+      alt="HVAC Solution" 
+      className="w-full h-48 md:h-64 lg:h-72 object-cover rounded-xl"
+    />
+  </div>
+</motion.div>
+
 
       {/* Safety & Sustainability */}
-      <motion.div
-        className="bg-gradient-to-r from-gray-700 to-gray-800  text-white p-12 md:p-16 pb-24 rounded-3xl shadow-lg mx-auto max-w-5xl flex flex-col lg:flex-row items-center transform hover:scale-105 transition duration-300"
-        variants={slideLeftToRight}
-      >
-        <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
-          <img src={safety} alt="Safety Worker" className="w-full h-full object-cover rounded-l-xl" />
-        </div>
-        <div className="w-full lg:w-1/2 p-10">
-          <h2 className="text-4xl font-extrabold text-yellow-400 mb-10">SAFETY & SUSTAINABILITY</h2>
-          <p className="text-lg font-semibold">
-            We prioritize sustainability to ensure minimal environmental impact and future responsibility.
-          </p>
-        </div>
-      </motion.div></div>
+      {/* Safety & Sustainability */}
+<motion.div
+  className="bg-gradient-to-r from-gray-700 to-gray-800 text-white p-8 md:p-12 lg:p-16 rounded-3xl shadow-lg mx-auto max-w-[90%] md:max-w-4xl lg:max-w-5xl flex flex-col lg:flex-row items-center gap-6 lg:gap-12 transform hover:scale-105 transition duration-300"
+  variants={slideLeftToRight}
+>
+  <div className="w-full lg:w-1/2">
+    <img 
+      src={safety} 
+      alt="Safety Worker" 
+      className="w-full h-48 md:h-64 lg:h-72 object-cover rounded-xl"
+    />
+  </div>
+  <div className="w-full lg:w-1/2 p-6 md:p-10 text-center lg:text-left">
+    <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-yellow-400 mb-6">
+      SAFETY & SUSTAINABILITY
+    </h2>
+    <p className="text-base md:text-lg font-semibold leading-relaxed">
+      We prioritize sustainability to ensure minimal environmental impact and future responsibility.
+    </p>
+  </div>
+</motion.div>
+</div>
 </div>
   );
 }
