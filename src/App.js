@@ -8,26 +8,26 @@ import Project from "./pages/Projects";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
-import Loader from "./components/Loader"; // ✅ Importing Preloader
+import Loader from "./components/Loader"; 
 
 import "font-awesome/css/font-awesome.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const AppContent = () => {
-  const [loading, setLoading] = useState(false); // ✅ Starts with false for better first-load UX
+  const [loading, setLoading] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setLoading(true); // Show loader on route change
-    const timer = setTimeout(() => setLoading(false), 1200); // ⏳ Smooth delay for better UX
+    const timer = setTimeout(() => setLoading(false), 1000); // Smooth transition
     return () => clearTimeout(timer);
-  }, [location]);
+  }, [location.pathname]); // ✅ Track only `pathname` to prevent unnecessary reloads
 
   return (
     <>
       {loading ? (
-        <Loader /> // ✅ Show loader during transitions
+        <Loader /> // ✅ Show loader while switching pages
       ) : (
         <>
           <Header />
@@ -36,7 +36,7 @@ const AppContent = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Project />} />
-            <Route path="*" element={<NotFound />} /> {/* ✅ 404 Route */}
+            <Route path="*" element={<NotFound />} /> {/* ✅ 404 Page */}
           </Routes>
           <Footer />
         </>
@@ -47,7 +47,7 @@ const AppContent = () => {
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/">
       <AppContent />
     </Router>
   );
