@@ -97,7 +97,7 @@ const Header = () => {
 
             {/* Mobile Links */}
             <ul className="text-white text-3xl space-y-6 font-extrabold">
-              {["Home", "Pages", "Services", "Portfolio", "Blog", "Contact"].map((item) => (
+              {["Home","About","Projects","Contact"].map((item) => (
                 <motion.li key={item} whileHover={{ scale: 1.1, color: "#FACC15" }} transition={{ duration: 0.3 }}>
                   <Link to={`/${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>
                     {item}
