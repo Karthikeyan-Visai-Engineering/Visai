@@ -1,5 +1,5 @@
 import React from "react";
-
+import ab1 from "../assets/about1.png";
 function About() {
   return (
     <div className="bg-white text-blue-900 py-16">
@@ -28,12 +28,29 @@ function About() {
           <h2 className="text-4xl font-bold uppercase tracking-wide">Our Purpose</h2>
           <div className="w-20 h-1 bg-yellow-400 mx-auto mt-2 rounded-full"></div>
           <div className="mt-8 space-y-6 text-xl">
-            <div className="bg-gradient-to-r from-gray-700 to-gray-600 p-8 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
-            <p>
-            <strong className="text-orange-500 font-extrabold">Engineering Excellence:</strong> 
-            <span className="font-extrabold text-white"> Creating world-class innovative solutions.</span>
-            </p>
-            </div>
+          <div className="mt-8 bg-gradient-to-r from-gray-700 to-gray-600 p-8 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
+  <div className="flex flex-col md:flex-row items-center gap-6">
+    {/* Left Side - Text */}
+    <div className="md:w-1/2 text-xl text-white ">
+      <p>
+        <strong className="text-orange-500 font-extrabold">Engineering Excellence:</strong> 
+        <span className="font-extrabold"> Creating world-class innovative solutions.</span>
+      </p>
+    </div>
+
+    {/* Right Side - Image */}
+    <div className="md:w-1/2 ">
+      <img 
+        src={ab1}
+        alt="Engineering Excellence - Innovative Solutions" 
+        className="rounded-5xl shadow-lg object-cover w-full h-full"
+      />
+    </div>
+  </div>
+</div>
+
+
+
             <div className="bg-gradient-to-r from-gray-700 to-gray-600 p-8 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
               <p><strong className="text-orange-500 font-extrabold"> Customer Commitment:</strong>
               <span className="font-extrabold text-white"> Your trust is our greatest success. </span> </p>
